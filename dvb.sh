@@ -31,4 +31,4 @@ echo "正在更新 initramfs..."
 update-initramfs -u
 echo "initramfs 已更新。"
 
-echo "所有步骤已完成。"
+echo "已经禁止 virtio_balloon 模块开机启动。"
