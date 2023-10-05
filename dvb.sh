@@ -2,9 +2,10 @@
 
 # 步骤1：检查 virtio_balloon 模块是否已加载
 if lsmod | grep -q virtio_balloon; then
-  echo "virtio_balloon 模块已加载。"
+  echo "virtio_balloon 模块已加载。继续执行下面的步骤。"
 else
-  echo "virtio_balloon 模块尚未加载。"
+  echo "virtio_balloon 模块尚未加载。退出脚本。"
+  exit 1
 fi
 
 # 步骤2：如果已加载 virtio_balloon 模块，则卸载它
